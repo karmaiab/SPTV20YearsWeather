@@ -21,7 +21,7 @@ public class SPTV20YearsWeather {
      */
     public static void main(String[] args) {
         Random random = new Random();
-        int min = -20, max = 20, dayInMonth = 1;
+        int min = -20, max = 20, dayInMonth = 1, maxInt = 0;
         double sum = 0, avg = 0;
         // Зубчетый массив
         int[][] yearsWeather = new int[12][];
@@ -91,6 +91,15 @@ public class SPTV20YearsWeather {
             System.out.println("Month :");
             int month = scanner.nextInt();
             System.out.printf("On this day the temp. was: %2d", yearsWeather[month-1][day-1]);
+            
+        for (int i = 0; i < yearsWeather.length; i++) {
+            for (int j = 0; j < yearsWeather.length; j++) {
+                if(maxInt < yearsWeather[i][j]){
+                    maxInt=yearsWeather[i][j];
+                }
+            }
+        }
+        System.out.println();
     }
-    
+
 }
