@@ -6,6 +6,7 @@
 package sptv20yearsweather;
 
 import java.util.Random;
+import java.util.Scanner;
 
 /**
  *
@@ -84,6 +85,12 @@ public class SPTV20YearsWeather {
             }
             System.out.println();
         }
+        Scanner scanner = new Scanner(System.in);
+            System.out.println("Day: ");
+            int day = scanner.nextInt();
+            System.out.println("Month :");
+            int month = scanner.nextInt();
+            System.out.printf("On this day the temp. was: %2d", yearsWeather[month-1][day-1]);
     }
     
 }
